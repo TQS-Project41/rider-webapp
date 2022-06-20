@@ -1,0 +1,17 @@
+version: "3.0"
+
+services:
+  angular-service:
+    container_name: riders-service-prod
+    build: ./app
+    networks:
+      - riders_prod
+    env_file: ./deployment/.env
+    environment:
+      WEBAPP_LOCAL_PORT: $WEBAPP_LOCAL_PORT
+      WEBAPP_DOCKER_PORT: $WEBAPP_DOCKER_PORT
+    ports:
+        - $WEBAPP_LOCAL_PORT:$WEBAPP_DOCKER_PORT
+
+networks:
+  riders_prod:
