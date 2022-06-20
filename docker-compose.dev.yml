@@ -3,7 +3,7 @@ version: "3.0"
 services:
   angular-service:
     container_name: riders-service-test
-    build: ./app
+    build: ./webapp
     networks:
       - riders_test
     env_file: ./testing/.env

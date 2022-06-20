@@ -3,7 +3,7 @@ version: "3.0"
 services:
   angular-service:
     container_name: riders-service-prod
-    build: ./app
+    build: ./webapp
     networks:
       - riders_prod
     env_file: ./deployment/.env
