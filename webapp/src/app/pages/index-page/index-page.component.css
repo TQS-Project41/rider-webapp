@@ -194,8 +194,8 @@
 .set-bg {
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top center;
-	background-image: url('../../../assets/img/banner.jpg') ;
+	background-position: center center;
+	background-image: url('../../../assets/img/banner.webp') ;
 }
 
 /* .grey-bg {  

@@ -28,7 +28,7 @@ export class AuthService {
   }
 
   register(json: JSON) {
-    return this.http.post(environment.PUBLIC_API + "register", json);
+    return this.http.post(environment.PUBLIC_API + "couriers", json);
   }
 
 }

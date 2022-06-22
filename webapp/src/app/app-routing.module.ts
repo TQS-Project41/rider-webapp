@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IndexPageComponent } from './pages/index-page/index-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { DeliveriesComponent } from './pages/deliveries/deliveries.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -11,6 +12,7 @@ const routes: Routes = [
   
   { path: '', component: IndexPageComponent },
   { path: 'navigation', component: NavigationPageComponent },
+  { path: 'deliveries', component: DeliveriesComponent },
 ];
 
 @NgModule({

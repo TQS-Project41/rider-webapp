@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
       name: [null],
       email: [null],
       password:[null],
-      birthday:[null]
+      birthdate:[null]
     });
   }
 
@@ -49,30 +49,35 @@ export class RegisterComponent implements OnInit {
       this.error_diff_password = true;
     }
 
-    if (!this.registerForm.value["birthday"]) {
+    if (!this.registerForm.value["birthdate"]) {
       this.error_birthday = true;
 
     }
     else {
       var today = new Date();
       today.setHours(0,0,0,0);
-      var bday = new Date(this.registerForm.value["birthday"]);
+      var bday = new Date(this.registerForm.value["birthdate"]);
       if(bday >= today) this.error_birthday = true;
-      this.registerForm.value["birthday"] = bday;
+      this.registerForm.value["birthdate"] = bday;
     }
 
     if (this.allValid()) {
       let str = JSON.stringify(this.registerForm.value);
       let json = JSON.parse(str);
 
-      let bday = formatDate(json["birthday"], 'dd-MM-yyyy', 'en_US')
-      json["birthday"] = bday
+      let bday = formatDate(json["birthdate"], 'dd-MM-yyyy', 'en_US')
+      json["birthdate"] = bday
 
       json["photo"] = ""
       
       this.service.register(json).subscribe({
-        next: () => {
+        next: (info: any) => {
           this.success = true;
+          
+          localStorage.setItem('token', info["token"]);
+          setTimeout( function(){
+            window.location.href = "/"
+          }, 1000);
         }, 
         error: (error) => {
           console.log(error);
