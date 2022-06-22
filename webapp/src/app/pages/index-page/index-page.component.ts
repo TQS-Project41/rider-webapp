@@ -12,11 +12,18 @@ export class IndexPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /*
   toggleNotification () {
     let notification = document.getElementById('request-notification')!;
     notification.hidden = !notification.hidden
 
     if (notification.hidden) setTimeout(this.toggleNotification, 5000)
+  }
+  */
+
+  checkIfLoggedIn() {
+    if (localStorage.getItem('token')) return true
+    return false
   }
 
 }
