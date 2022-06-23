@@ -14,6 +14,7 @@ import { HTTPService } from './services/http.service';
 import { DeliveriesComponent } from './pages/deliveries/deliveries.component';
 import { AllBusinessesComponent } from './pages/all-businesses/all-businesses.component';
 import { ClientsComponent } from './pages/clients/clients.component';
+import { MyDeliveriesComponent } from './pages/my-deliveries/my-deliveries.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ClientsComponent } from './pages/clients/clients.component';
     RegisterComponent,
     DeliveriesComponent,
     AllBusinessesComponent,
-    ClientsComponent
+    ClientsComponent,
+    MyDeliveriesComponent
   ],
   imports: [
     BrowserModule,

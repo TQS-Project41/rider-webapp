@@ -23,7 +23,8 @@
                 <td>{{delivery.deliveryTimestamp}}</td>
                 <td>{{delivery.status}}</td>
                 <td class="text-center">
-                    <button *ngIf="delivery.status == 'QUEUED'" class="btn btn-success" (click)="accept(delivery.id)">Accept</button>
+                    <button *ngIf="delivery.status == 'COLLECTING'" class="btn btn-success" (click)="collect(delivery.id)">Collect</button>
+                    <button *ngIf="delivery.status == 'DELIVERING'" class="btn btn-success" (click)="deliver(delivery.id)">Deliver</button>
                 </td>
             </tr>
             </tbody>
