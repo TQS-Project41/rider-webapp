@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+
+<div class="grey-bg container pt-4">
+    
+    <div class="d-flex" >
+      <h4>All businesses</h4> 
+    </div>
+
+    <div class="col-lg-12" *ngIf="all_businesses.length != 0">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">State</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr *ngFor="let business of all_businesses">
+                <td>{{business.business}}</td>
+                <td>{{business.event.name}}</td>
+                <td class="text-center">
+                    <button *ngIf="business.event.id == -1" class="btn btn-success" (click)="apply(business.id)">Apply</button>
+                    <button *ngIf="business.event.id == 2" class="btn btn-danger" (click)="refuse(business.id)">Refuse</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+  
+</div>    

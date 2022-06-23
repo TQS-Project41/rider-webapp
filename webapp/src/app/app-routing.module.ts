@@ -5,13 +5,16 @@ import { IndexPageComponent } from './pages/index-page/index-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { DeliveriesComponent } from './pages/deliveries/deliveries.component';
+import { AllBusinessesComponent } from './pages/all-businesses/all-businesses.component';
+import { ClientsComponent } from './pages/clients/clients.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   
   { path: '', component: IndexPageComponent },
-  { path: 'navigation', component: NavigationPageComponent },
+  { path: 'all_businesses', component: AllBusinessesComponent },
+  { path: 'clients', component: ClientsComponent },
   { path: 'deliveries', component: DeliveriesComponent },
 ];
 

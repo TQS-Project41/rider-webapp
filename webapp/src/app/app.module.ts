@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HTTPService } from './services/http.service';
 import { DeliveriesComponent } from './pages/deliveries/deliveries.component';
+import { AllBusinessesComponent } from './pages/all-businesses/all-businesses.component';
+import { ClientsComponent } from './pages/clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { DeliveriesComponent } from './pages/deliveries/deliveries.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    DeliveriesComponent
+    DeliveriesComponent,
+    AllBusinessesComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,

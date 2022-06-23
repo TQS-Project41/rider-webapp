@@ -10,11 +10,10 @@ export class IndexPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+    
     if (this.checkIfLoggedIn()) {
       window.location.href = "/deliveries";
     }
-
   }
 
   /*
